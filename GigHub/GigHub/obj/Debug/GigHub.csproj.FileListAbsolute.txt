@@ -125,3 +125,4 @@ C:\Users\Windows\Desktop\Examples\GigHub\GigHub\GigHub\obj\Debug\GigHub.csproj.G
 C:\Users\Windows\Desktop\Examples\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.CreateGigTable.resources
 C:\Users\Windows\Desktop\Examples\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.OverrideConventionsForGigsAndGenres.resources
 C:\Users\Windows\Desktop\Examples\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.PopulateGenresTable.resources
+C:\Users\Windows\Desktop\Examples\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddForeignKeyPropertiesToGig.resources
