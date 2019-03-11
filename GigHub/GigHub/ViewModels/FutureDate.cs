@@ -12,12 +12,12 @@ namespace GigHub.ViewModels
         public override bool IsValid(object value)
         {
             DateTime dateTime;
-            var isValid = DateTime.TryParseExact(Convert.ToString(value), 
-                "dd MMM yyyy", 
+            var _isValid = DateTime.TryParseExact(Convert.ToString(value),
+                "d MMM yyyy", 
                 CultureInfo.CurrentCulture,
                 DateTimeStyles.None, 
                 out dateTime);
-            return (isValid && dateTime > DateTime.Now);
+            return (_isValid && dateTime > DateTime.Now);
         }
     }
 }
