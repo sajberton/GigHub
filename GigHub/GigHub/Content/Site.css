@@ -40,6 +40,19 @@ body {
         color: #fff;
     }
 
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  
+    background-color: #b73332a6;
+}
+
+.navbar-brand {
+    font-weight:700;
+}
+
+.dropdown-menu {
+    box-shadow: none;
+    -webkit-box-shadow:none;
+}
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: Lato;  
 }
