@@ -29,6 +29,9 @@ textarea {
     border-color: #ff4342;
 }
 
+body {
+    font-size: 17px;
+}
     .navbar-inverse .navbar-nav > li > a {
         color: #fff;
     }
@@ -39,4 +42,26 @@ textarea {
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: Lato;  
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    font-size: 17px;
+    padding: 20px 15px;
+    border-radius: 9px;
+}
+
+.form-control:focus {
+   border-color: #2196F3;
+   box-shadow:none;
+
+}
+
+.btn {
+    font-size:17px;
+    padding: 7px 20px;
+    border-radius: 9px;
 }
