@@ -83,3 +83,23 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     padding: 7px 20px;
     border-radius: 9px;
 }
+
+/*Page-level styles*/
+
+.gigs {
+    /*Removes the bulet points*/
+    list-style:none;
+}
+
+/*the li imidietly below the gigs element*/
+.gigs > li {
+
+    position:relative;
+    margin-bottom: 30px;
+}
+
+.gigs > li .details {
+    position:absolute;
+    top:0;
+    left:70px;
+}
