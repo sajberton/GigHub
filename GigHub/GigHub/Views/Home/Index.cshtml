@@ -32,9 +32,10 @@
 {
     <script>
         $(document).ready(function () {           //e-respresents the event from the event we can get the source of the event the button
+           
             $(".js-toggle-attendance").click(function (e) {
                 var button = $(e.target)   //the buttton  zosto vaka na sec 14 - Introdusing a DTO  
-                $.post("api/attendances", {"": button.attr("data-gig-id") })
+                $.post("/api/attendances", { gigId : button.attr("data-gig-id") })
                     .done(function () {
                         button.removeClass("btn-default")
                             .addClass("btn-info")
