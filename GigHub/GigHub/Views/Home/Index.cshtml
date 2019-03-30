@@ -1,30 +1,38 @@
-﻿@model IEnumerable<GigHub.Models.Gig>
+﻿@model GigHub.ViewModels.HomeViewModel
 @{
     ViewBag.Title = "Home Page";
 }
 
 <ul class="gigs">
-    @foreach (var gig in Model)
+    @foreach (var gig in Model.UpcomingGigs)
     {
-    <li>
-        <div class="date">
-            <div class="month">
-                @gig.DateTime.ToString("MMM")
+        <li>
+            <div class="date">
+                <div class="month">
+                    @gig.DateTime.ToString("MMM")
+                </div>
+                <div class="day">
+                    @gig.DateTime.ToString("d ")
+                </div>
             </div>
-            <div class="day">
-                @gig.DateTime.ToString("d ")
+            <div class="details">
+                <span class="artist">
+                    @gig.Artist.Name
+
+                    @if (Model.ShowActions)
+                    {
+                        <button class="btn btn-link btn-sm js-toggle-follow" data-user-id="@gig.ArtistId">Following</button>
+                    }
+                </span>
+                <span class="genre">
+                    @gig.Genre.Name
+                </span>
+                    @if (Model.ShowActions)
+                    {
+                        <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going ?</button>
+                    }
             </div>
-        </div>
-        <div class="details">
-            <span class="artist">
-                @gig.Artist.Name <button class="btn btn-link btn-sm js-toggle-follow" data-user-id="@gig.ArtistId">Following</button>
-            </span>
-            <span class="genre">
-                @gig.Genre.Name
-            </span>
-            <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going ?</button>
-        </div>
-    </li>
+        </li>
     }
 </ul>
 
@@ -32,10 +40,10 @@
 {
     <script>
         $(document).ready(function () {           //e-respresents the event from the event we can get the source of the event the button
-           
+
             $(".js-toggle-attendance").click(function (e) {
-                var button = $(e.target)   //the buttton  zosto vaka na sec 14 - Introdusing a DTO  
-                $.post("/api/attendances", { gigId : button.attr("data-gig-id") })
+                var button = $(e.target)   //the buttton  zosto vaka na sec 14 - Introdusing a DTO
+                $.post("/api/attendances", { gigId: button.attr("data-gig-id") })
                     .done(function () {
                         button.removeClass("btn-default")
                             .addClass("btn-info")
