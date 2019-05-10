@@ -43,9 +43,7 @@ namespace GigHub.ViewModels
                      (c => c.Create(this));
 
                 var action = (Id != 0) ? update : create;
-                var actionName = (action.Body as MethodCallExpression).Method.Name;
-
-                return (Id != 0) ? "Update" : "Create";          
+                return (action.Body as MethodCallExpression).Method.Name;          
             }
         }
 
