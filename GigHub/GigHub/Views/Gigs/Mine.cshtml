@@ -41,26 +41,54 @@
 
 @section scripts
 {
-  <script>
-      $(document).ready(function () {
-          $(".js-cancel-gig").click(function (e) {
-              var link = $(e.target);
-              if (confirm("Are you sure that you want to dellete this gig?")) {
-                  $.ajax({
-                      url: "/api/gigs/" + link.attr("data-gig-id"),
-                      method:"DELETE"
-                  })
-                      .done(function () {
-                          link.parents("li").fadeOut(function () {
-                              $(this).remove();
-                          });
-                      })
-                      .fail(function () {
-                          alert("something Failed");
-                      })
-              }
-          })
-      })
-  </script>  
+    <script>
+        $(document).ready(function () {
+            $(".js-cancel-gig").click(function (e) {
+                var link = $(e.target);
+                bootbox.dialog({
+                    title: 'Confirm',
+                    message: "Are you sure that you want to cancel this gig",
+                    size: 'large',
+                    buttons: {
+                        no: {
+                            label: "No",
+                            className: 'btn-default',
+                            callback: function () {
+                                bootbox.hideAll();
+                            }
+                        },
+                        yes: {
+                            label: "Yes",
+                            className: 'btn-danger',
+                            callback: function () {
+                                
+                            }
+                        },
+                        ok: {
+                            label: "I'm an OK button!",
+                            className: 'btn-info',
+                            callback: function () {
+                                console.log('Custom OK clicked');
+                            }
+                        }
+                    }
+                });
+                bootbox.confirm("Are you sure that you want to cancel this gig?", function (result) {                    
+                    $.ajax({
+                        url: "/api/gigs/" + link.attr("data-gig-id"),
+                        method: "DELETE"
+                    })
+                        .done(function () {
+                            link.parents("li").fadeOut(function () {
+                                $(this).remove();
+                            });
+                        })
+                        .fail(function () {
+                            alert("something Failed");
+                        })                    
+                });
+            })
+        })
+    </script>
 }
 
