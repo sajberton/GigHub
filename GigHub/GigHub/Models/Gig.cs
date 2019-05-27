@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
@@ -27,6 +28,13 @@ namespace GigHub.Models
 
         [Required]
         public byte GenreId { get; set; }
+
+        public ICollection<Attendace> Attendaces { get; private set; }
+
+        public Gig()
+        {
+            Attendaces = new Collection<Attendace>();
+        }
     }
     
 }
