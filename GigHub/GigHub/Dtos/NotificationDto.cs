@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace GigHub.Controllers.Api
+namespace GigHub.Dtos
 {
     public class NotificationDto
     {

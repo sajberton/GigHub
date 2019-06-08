@@ -137,3 +137,6 @@ C:\Users\Windows\Desktop\Examples\GigHub\GigHub\GigHub\bin\System.Web.Http.WebHo
 C:\Users\Windows\Desktop\Examples\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddFollowing.resources
 C:\Users\Windows\Desktop\Examples\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddIsCanceledToGig.resources
 C:\Users\Windows\Desktop\Examples\GigHub\GigHub\GigHub\obj\Debug\GigHub.Migrations.AddNotification.resources
+C:\Users\Windows\Desktop\Examples\GigHub\GigHub\GigHub\bin\AutoMapper.dll
+C:\Users\Windows\Desktop\Examples\GigHub\GigHub\GigHub\bin\AutoMapper.pdb
+C:\Users\Windows\Desktop\Examples\GigHub\GigHub\GigHub\bin\AutoMapper.xml
