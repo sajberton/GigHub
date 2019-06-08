@@ -46,6 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=8.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.8.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -206,7 +209,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\GenreDto.cs" />
+    <Compile Include="Controllers\Api\GigDto.cs" />
     <Compile Include="Controllers\Api\GigsController.cs" />
+    <Compile Include="Controllers\Api\NotificationDto.cs" />
+    <Compile Include="Controllers\Api\NotificationsController.cs" />
+    <Compile Include="Controllers\Api\UserDto.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
     <Compile Include="Controllers\FollowingsController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
