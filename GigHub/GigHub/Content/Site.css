@@ -51,7 +51,16 @@ body {
     .navbar-inverse .navbar-brand {
         color: #fff;
     }
+.navbar-inverse .notifications{
+    position:relative;
+}
 
+.navbar-inverse .notifications .badge {
+    position: absolute;
+    top:8px;
+    right:0px;
+    background:#a80a0a;
+}
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
   
     background-color: #b73332a6;
@@ -65,6 +74,7 @@ body {
     box-shadow: none;
     -webkit-box-shadow:none;
 }
+
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: Lato;  
 }
